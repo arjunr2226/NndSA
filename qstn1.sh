@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Display the current date and time
-echo "Current date: $(date +'%Y-%m-%d')"
-echo "Current time: $(date +'%H:%M:%S')"
+echo "Current date: $(date +%F)"
+echo "Current time: $(date +%T)"
 
 # Display the current username
 echo "Username: $(whoami)"
