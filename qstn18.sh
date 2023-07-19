@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "Enter your password"
+read -r password
+len=${#password}
+
+if ((len >= 8)); then
+    echo "$password" | grep -q [0-9]
+
+    if (( $? == 0 )); then
+        echo "$password" | grep -q [A-Z]
+
+        if (( $? == 0 )); then
+            echo "$password" | grep -q [a-z]
+
+            if (( $? == 0 )); then
+                echo "Strong Password"
+            else
+                echo "Weak Password -> Should include a lower case letter."
+            fi
+        else
+            echo "Weak Password -> Should include a capital case letter."
+        fi
+    else
+        echo "Weak Password -> Should use numbers in your password."
+    fi
+else
+    echo "Weak Password -> Password length should have at least 8 characters."
+fi
+

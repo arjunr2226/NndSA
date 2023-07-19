@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/path"
+path="/mnt/c/Users/ok/Desktop/N&SA/test"
 
 if [ -d "$path" ]; then
 	cd "$path" || exit

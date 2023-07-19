@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory="C:\Users\ok\Desktop\N&SA\test"
+directory="/mnt/c/Users/ok/Desktop/network"
 
 # Check if the directory exists
 if [ -d "$directory" ]; then
