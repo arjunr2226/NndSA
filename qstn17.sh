@@ -1,1 +1,3 @@
-find . -name *.txt -exec grep -c Linux '{}' \; | awk '{x+=$0;}END{print x}'
+#!/bin/bash
+read -p "Enter directory: " path
+grep -i -o -r Linux "$path" | wc -l
